@@ -3,7 +3,8 @@ import type { Response } from "express";
 export const successResponse = (res: Response, status: number, data: any, message: string = "Success") => {
     return res.status(status).json({
         success: true,
-        message: data
+        message,
+        data
     });
 }
 

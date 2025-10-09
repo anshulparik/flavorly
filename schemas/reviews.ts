@@ -18,12 +18,7 @@ export const ReviewSchema = z.object({
         .string()
         .min(1, { message: "Reviewer name is required" })
         .max(100, { message: "Reviewer name must be under 100 characters" })
-        .optional(),
-
-    date: z
-        .iso
-        .date({ message: "Invalid date format (must be ISO string)" })
-        .optional(),
+        .optional()
 });
 
 
